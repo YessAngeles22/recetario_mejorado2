@@ -1,0 +1,134 @@
+/* Reset para margenes y paddings por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general para el cuerpo de la pagina */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Titulo principal */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilo de los formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d082ff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Estilo de las etiquetas del formulario */
+label {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+}
+
+/* Estilo de los campos de entrada */
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Estilo del boton */
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+/* Estilo de los enlaces */
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.2em;
+    margin: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 2px solid #007bff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+    /* Efecto hover para los enlaces */
+    a:hover {
+        background-color: #007bff;
+        color: white;
+    }
+
+/* Estilo de la tabla */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #f599ff;
+}
+
+/* Estilo de las celdas de la tabla */
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Estilo de las cabeceras de la tabla */
+th {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.1em;
+}
+
+/* Filas alternas de la tabla */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilo para los flash messages */
+.flash {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+    .flash.success {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .flash.error {
+        background-color: #dc3545;
+        color: white;
+    }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Receta Médica</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Receta Médica</h1>
+        <form action="{{ url_for('crear_receta') }}" method="post">
+
+            <label for="paciente_nombre">Nombre del Paciente:</label>
+            <input type="text" name="paciente_nombre" placeholder="Ingrese el nombre del paciente" required>
+            <br>
+
+            <label for="doctor_nombre">Nombre del Doctor:</label>
+            <input type="text" name="doctor_nombre" placeholder="Ingrese el nombre del doctor" required>
+            <br>
+
+            <label for="detalles">Detalles:</label>
+            <textarea name="detalles" placeholder="Detalles de la receta" required></textarea>
+            <br>
+
+            <label for="medicamento_nombre">Nombre del Medicamento:</label>
+            <input type="text" name="medicamento_nombre" placeholder="Ingrese el nombre del medicamento" required>
+            <br>
+
+            <label for="cantidad">Cantidad:</label>
+            <input type="text" name="cantidad" placeholder="Cantidad de medicamento" required>
+            <br>
+
+            <button type="submit">Guardar receta</button>
+        </form>
+    </div>
+</body>
+</html>

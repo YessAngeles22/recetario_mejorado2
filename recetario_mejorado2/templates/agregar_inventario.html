@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventario de Medicamentos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+    <h1>Inventario de Medicamentos</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Cantidad Disponible</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for medicamento in medicamentos %}
+            <tr>
+                <td>{{ medicamento.nombre }}</td>
+                <td>{{ medicamento.cantidad_disponible }}</td>
+                <td>
+                    <a href="{{ url_for('editar_medicamento', medicamento_id=medicamento.id) }}">Editar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="{{ url_for('agregar_medicamento') }}">Agregar Medicamento</a>
+</body>
+</html>
